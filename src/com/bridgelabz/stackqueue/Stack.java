@@ -25,6 +25,28 @@ public class Stack {
 		counter++;
 	}
 
+	public boolean isEmpty() {
+		return (top == null) ? true : false;
+	}
+
+	public void pop() {
+		
+		if (isEmpty()) {
+			System.out.println("Stack is empty");
+		} else {
+			System.out.println(top.data + "");	
+			top = top.next;
+			counter--;
+		}
+	}
+	
+	public int peak() {
+		if(isEmpty()) {
+			System.out.println("Stack is empty");
+		}
+		return top.data;
+	}
+
 	public void display() {
 		Node temp = top;
 		while (temp != null) {

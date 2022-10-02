@@ -9,7 +9,7 @@ public class Main {
 		Stack stack = new Stack();
 		int choice = 0;
 		do {
-			System.out.println("\n1.PUSH\n2.Display\n3.Exit");
+			System.out.println("\n1.PUSH\n2.POP\n3.Display\n4.PEAK\n5.Exit");
 			System.out.println("Enter Choice:");
 			choice = sc.nextInt();
 			switch (choice) {
@@ -18,15 +18,21 @@ public class Main {
 				stack.push(sc.nextInt());
 				break;
 			case 2:
-				stack.display();
+				stack.pop();
 				break;
 			case 3:
+				stack.display();
+				break;
+			case 4:
+				stack.peak();
+				break;
+			case 5:
 				System.out.println("Byeee!!");
 				break;
 			default:
 				System.out.println("Select From Menu");
 			}
-		} while (choice != 3);
+		} while (choice != 5);
 
 	}
 
